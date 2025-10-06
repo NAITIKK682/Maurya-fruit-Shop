@@ -22,34 +22,34 @@ const contactForm = document.getElementById('contact-form');
 
 
 
-// Fruit data
+// Fruit data with image paths
 const fruits = [
-    { name: 'Mango', localName: 'Mango' },
-    { name: 'Banana', localName: 'Banana' },
-    { name: 'Guava', localName: 'Guava' },
-    { name: 'Orange', localName: 'Orange' },
-    { name: 'Grapes', localName: 'Grapes' },
-    { name: 'Pomegranate', localName: 'Pomegranate' },
-    { name: 'Papaya', localName: 'Papaya' },
-    { name: 'Watermelon', localName: 'Watermelon' },
-    { name: 'Apple', localName: 'Apple' },
-    { name: 'Jackfruit', localName: 'Jackfruit' },
-    { name: 'Chikoo', localName: 'Chikoo' },
-    { name: 'Sitaphal', localName: 'Sitaphal' },
-    { name: 'Litchi', localName: 'Litchi' },
-    { name: 'Coconut', localName: 'Coconut' },
-    { name: 'Ber', localName: 'Ber' },
-    { name: 'Jamun', localName: 'Jamun' },
-    { name: 'Plum', localName: 'Plum' },
-    { name: 'Pineapple', localName: 'Pineapple' },
-    { name: 'Strawberry', localName: 'Strawberry' },
-    { name: 'Kiwi', localName: 'Kiwi' },
-    { name: 'Pear', localName: 'Pear' },
-    { name: 'Dragon', localName: 'Dragon' },
-    { name: 'Mulberry', localName: 'Mulberry' },
-    { name: 'Dates', localName: 'Dates' }
-    
+  { name: 'Mango', localName: 'Mango', img: 'images/fruits/mango.jpg' },
+  { name: 'Banana', localName: 'Banana', img: 'images/fruits/banana.jpg' },
+  { name: 'Guava', localName: 'Guava', img: 'images/fruits/guava.jpg' },
+  { name: 'Orange', localName: 'Orange', img: 'images/fruits/orange.jpg' },
+  { name: 'Grapes', localName: 'Grapes', img: 'images/fruits/grapes.jpg' },
+  { name: 'Pomegranate', localName: 'Pomegranate', img: 'images/fruits/pomegranate.jpg' },
+  { name: 'Papaya', localName: 'Papaya', img: 'images/fruits/papaya.jpg' },
+  { name: 'Watermelon', localName: 'Watermelon', img: 'images/fruits/watermelon.jpg' },
+  { name: 'Apple', localName: 'Apple', img: 'images/fruits/apple.jpg' },
+  { name: 'Jackfruit', localName: 'Jackfruit', img: 'images/fruits/jackfruit.jpg' },
+  { name: 'Chikoo', localName: 'Chikoo', img: 'images/fruits/chikoo.jpg' },
+  { name: 'Sitaphal', localName: 'Sitaphal', img: 'images/fruits/sitaphal.jpg' },
+  { name: 'Litchi', localName: 'Litchi', img: 'images/fruits/litchi.jpg' },
+  { name: 'Coconut', localName: 'Coconut', img: 'images/fruits/coconut.jpg' },
+  { name: 'Ber', localName: 'Ber', img: 'images/fruits/ber.jpg' },
+  { name: 'Jamun', localName: 'Jamun', img: 'images/fruits/jamun.jpg' },
+  { name: 'Plum', localName: 'Plum', img: 'images/fruits/plum.jpg' },
+  { name: 'Pineapple', localName: 'Pineapple', img: 'images/fruits/pineapple.jpg' },
+  { name: 'Strawberry', localName: 'Strawberry', img: 'images/fruits/strawberry.jpg' },
+  { name: 'Kiwi', localName: 'Kiwi', img: 'images/fruits/kiwi.jpg' },
+  { name: 'Pear', localName: 'Pear', img: 'images/fruits/pear.jpg' },
+  { name: 'Dragon', localName: 'Dragon', img: 'images/fruits/dragon.jpg' },
+  { name: 'Mulberry', localName: 'Mulberry', img: 'images/fruits/mulberry.jpg' },
+  { name: 'Dates', localName: 'Dates', img: 'images/fruits/dates.jpg' }
 ];
+
 
 // Juice data
 const juices = [
@@ -87,47 +87,45 @@ const galleryImages = [
     { src: 'images/gallery/img20.jpg', caption: 'Shop View 20' }
 ];
 
-// Populate fruits section
+// Corrected populateFruits function
 function populateFruits() {
     fruitsGrid.innerHTML = '';
-    
+
     fruits.forEach(fruit => {
         const fruitItem = document.createElement('div');
         fruitItem.className = 'fruit-item';
-        
-        // Create image path based on fruit name (lowercase with hyphens)
-        const imageName = fruit.name.toLowerCase().replace(/\s+/g, '-');
-        const imagePath = `images/fruits/${imageName}.jpg`;
-        
+
+        // Use the exact image path from the 'img' property
         fruitItem.innerHTML = `
-            <img src="${imagePath}" alt="${fruit.name}">
+            <img src="${fruit.img}" alt="${fruit.name}">
             <p>${fruit.localName}</p>
         `;
-        
+
         fruitsGrid.appendChild(fruitItem);
     });
 }
 
-// Populate juices section
+// Corrected populateJuices function
 function populateJuices() {
     juicesGrid.innerHTML = '';
-    
+
     juices.forEach(juice => {
         const juiceItem = document.createElement('div');
         juiceItem.className = 'juice-item';
-        
-        // File name format: mango-juice.jpg, banana-juice.jpg etc.
-        const imageName = juice.name.toLowerCase().replace(/\s+/g, '-');
-        const imagePath = `images/juices/${imageName}-juice.jpg`;
-        
+
+        // Manually specify image path (assume you create 'img' property in juices array if needed)
+        const imageName = juice.name.toLowerCase().replace(/\s+/g, '-') + '-juice.jpg';
+        const imagePath = `images/juices/${imageName}`;
+
         juiceItem.innerHTML = `
             <img src="${imagePath}" alt="${juice.name}">
             <p>${juice.localName}</p>
         `;
-        
+
         juicesGrid.appendChild(juiceItem);
     });
 }
+
 
 // Populate gallery section
 function populateGallery() {
