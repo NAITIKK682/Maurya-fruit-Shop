@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Maurya Fruits & Juice Center - Fresh Fruits & Juices</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" type="image/png" href="images/logo.png" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="logo">
+          <img src="images/logo.png" alt="Maurya Fruits & Juice Center Logo" />
+          <h1>Maurya Fruits & Juice Center</h1>
+        </div>
+
+        <ul class="nav-links">
+          <li><a href="#home" class="nav-link active">Home</a></li>
+          <li><a href="#fruits" class="nav-link">Fruits</a></li>
+          <li><a href="#juices" class="nav-link">Juices</a></li>
+          <li><a href="#nariyal-pani" class="nav-link">Nariyal Pani</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#gallery" class="nav-link">Gallery</a></li>
+          <li><a href="#payment" class="nav-link">Payment</a></li>
+          <li><a href="#timings" class="nav-link">Timings</a></li>
+          <li><a href="#seasonal" class="nav-link">Seasonal</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+          <li><a href="#faqs" class="nav-link">FAQs</a></li>
+        </ul>
+
+        <div class="menu-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="hero-section">
+      <div class="hero-content">
+        <h2 class="hero-title">Welcome to Maurya Fruits Shop</h2>
+        <p class="hero-tagline">
+          Fresh, Organic & Delicious Fruits Delivered Daily
+        </p>
+        <a href="#fruits" class="btn btn-primary">Explore Our Fruits</a>
+      </div>
+    </section>
+
+    <!-- Fruits Section -->
+    <section id="fruits" class="section fruits-section">
+      <div class="container">
+        <h2 class="section-title">Our Fresh Fruits</h2>
+
+        <div class="search-box">
+          <input type="text" id="fruit-search" placeholder="Search fruits..." />
+        </div>
+
+        <div class="fruits-grid" id="fruits-grid">
+          <!-- Fruits will be populated by JavaScript -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Juices Section -->
+    <section id="juices" class="section juices-section">
+      <div class="container">
+        <h2 class="section-title">Fresh Juices</h2>
+
+        <div class="search-box">
+          <input type="text" id="juice-search" placeholder="Search juices..." />
+        </div>
+
+        <div class="juices-grid" id="juices-grid">
+          <!-- Juices will be populated by JavaScript -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Nariyal Pani Section -->
+    <section id="nariyal-pani" class="section nariyal-section">
+      <div class="container">
+        <div class="nariyal-content">
+          <div class="nariyal-image">
+            <img src="images/nariyal-pane.jpg" alt="Coconut Water" />
+          </div>
+          <div class="nariyal-text">
+            <h2 class="section-title">Nariyal Pani - Fresh Coconut Water</h2>
+
+            <p class="section-description">
+              Experience the natural refreshment of freshly harvested coconut
+              water. Rich in electrolytes, vitamins, and minerals, our coconut
+              water is served straight from the nut, ensuring maximum freshness
+              and nutritional value.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about-section">
+      <div class="container">
+        <div class="about-content">
+          <div class="about-image">
+            <img src="images/owner.jpg" alt="Shop Owner" />
+          </div>
+          <div class="about-text">
+            <h2 class="section-title">About Maurya Fruit Shop</h2>
+
+            <p class="section-description">
+              Established in 2016, Maurya Fruit Shop has been serving the
+              community with the freshest and highest quality fruits for over
+              three decades. We source our fruits directly from local farmers
+              and APMC market Vashi ( Mumbai ) who practice organic farming
+              methods, ensuring that every fruit you buy is not only delicious
+              but also healthy and sustainable.
+            </p>
+
+            <p class="section-description">
+              Our mission is to bring the taste of nature to your table while
+              supporting local agriculture and sustainable practices. We believe
+              in quality over quantity, and every fruit is hand-selected with
+              care.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="section gallery-section">
+      <div class="container">
+        <h2 class="section-title">Our Gallery</h2>
+
+        <div class="gallery-grid" id="gallery-grid">
+          <!-- Gallery images will be populated by JavaScript -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Payment Section -->
+    <section id="payment" class="section payment-section">
+      <div class="container">
+        <h2 class="section-title">Payment Options</h2>
+
+        <div class="payment-options">
+          <div class="payment-option">
+            <div class="payment-icon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="48"
+                height="48"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect>
+                <line x1="1" y1="10" x2="23" y2="10"></line>
+              </svg>
+            </div>
+            <h3>Cash on Delivery</h3>
+            <p>
+              Pay when your order arrives at your doorstep. No card needed! To
+              confirm your order, we request a small advance payment.
+            </p>
+          </div>
+
+          <div class="payment-option">
+            <div class="payment-icon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="48"
+                height="48"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M12 2v4m0 16v4M4.93 4.93l2.83 2.83m14.14 14.14l2.83 2.83M2 12h4m16 0h4M4.93 19.07l2.83-2.83m14.14-14.14l2.83-2.83"
+                ></path>
+              </svg>
+            </div>
+            <h3>Online/UPI Payments</h3>
+            <p>
+              Secure payments via UPI apps like Google Pay, PhonePe, Paytm, and
+              more.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Timings Section -->
+    <section id="timings" class="section timings-section">
+      <div class="container">
+        <h2 class="section-title">Opening Hours</h2>
+
+        <div class="timings-table">
+          <table>
+            <thead>
+              <tr>
+                <th>Day</th>
+                <th>Hours</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Monday</td>
+                <td>7:00 AM - 11:00 PM</td>
+              </tr>
+              <tr>
+                <td>Tuesday</td>
+                <td>7:00 AM - 11:00 PM</td>
+              </tr>
+              <tr>
+                <td>Wednesday</td>
+                <td>7:00 AM - 11:00 PM</td>
+              </tr>
+              <tr>
+                <td>Thursday</td>
+                <td>7:00 AM - 11:00 PM</td>
+              </tr>
+              <tr>
+                <td>Friday</td>
+                <td>7:00 AM - 11:00 PM</td>
+              </tr>
+              <tr>
+                <td>Saturday</td>
+                <td>7:00 AM - 11:00 PM</td>
+              </tr>
+              <tr>
+                <td>Sunday</td>
+                <td>7:30 AM - 11:30 PM</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seasonal Availability Section -->
+    <section id="seasonal" class="section seasonal-section">
+      <div class="container">
+        <h2 class="section-title">Seasonal Availability</h2>
+
+        <div class="seasonal-grid">
+          <div class="seasonal-item">
+            <h3>Summer (April - June)</h3>
+            <ul>
+              <li>Banana</li>
+              <li>Apple</li>
+              <li>Guava</li>
+              <li>Pomegranate</li>
+              <li>Papaya</li>
+              <li>Watermelon</li>
+              <li>Coconut</li>
+              <li>Pineapple</li>
+              <li>Kiwi</li>
+              <li>Grapes</li>
+              <li>Dragon Fruit</li>
+              <li>Pear</li>
+              <li>Mango</li>
+              <li>Litchi</li>
+              <li>Jackfruit</li>
+            </ul>
+          </div>
+
+          <div class="seasonal-item">
+            <h3>Monsoon (July - September)</h3>
+            <ul>
+              <li>Banana</li>
+              <li>Apple</li>
+              <li>Guava</li>
+              <li>Plum</li>
+              <li>Pomegranate</li>
+              <li>Papaya</li>
+              <li>Watermelon</li>
+              <li>Coconut</li>
+              <li>Pineapple</li>
+              <li>Kiwi</li>
+              <li>Dragon Fruit</li>
+              <li>Pear</li>
+              <li>Ber</li>
+              <li>Jamun</li>
+            </ul>
+          </div>
+
+          <div class="seasonal-item">
+            <h3>Winter (October - March)</h3>
+            <ul>
+              <li>Banana</li>
+              <li>Apple</li>
+              <li>Guava</li>
+              <li>Pomegranate</li>
+              <li>Papaya</li>
+              <li>Watermelon</li>
+              <li>Coconut</li>
+              <li>Pineapple</li>
+              <li>Kiwi</li>
+              <li>Dragon Fruit</li>
+              <li>Pear</li>
+              <li>Orange</li>
+              <li>Grapes</li>
+              <li>Chikoo</li>
+              <li>Sitaphal</li>
+              <li>Dates</li>
+              <li>Plum</li>
+              <li>Strawberry</li>
+              <li>Mulberry</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact-section">
+      <div class="container">
+        <h2 class="section-title">Contact Us</h2>
+
+        <div class="contact-content">
+          <!-- Contact Info -->
+          <div class="contact-info">
+            <div class="contact-item">
+              <div class="contact-icon">
+                <!-- Phone Icon -->
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+                  ></path>
+                </svg>
+              </div>
+              <div class="contact-text">
+                <h3>Phone</h3>
+                <p>8948866980 / 9867420477</p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">
+                <!-- Email Icon -->
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                  ></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+              </div>
+              <div class="contact-text">
+                <h3>Email</h3>
+                <p>naitikk682@gmail.com</p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">
+                <!-- Address Icon -->
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"
+                  ></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+              </div>
+              <div class="contact-text">
+                <h3>Address</h3>
+                <p>
+                  Durga Nagar, Gaurai Pada, Vasai East, Palghar, Maharashtra,
+                  India
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <div class="contact-form">
+            <form id="contact-form">
+              <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" required />
+              </div>
+
+              <div class="form-group">
+                <label for="email">Your Email</label>
+                <input type="email" id="email" name="email" required />
+              </div>
+
+              <div class="form-group">
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" required />
+              </div>
+
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="5"
+                  required
+                ></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary">
+                Send Message
+              </button>
+              <p id="status"></p>
+            </form>
+          </div>
+        </div>
+
+        <!-- Map -->
+        <div class="map-container">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d15000!2d72.84496423925006!3d19.421666302635447!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1694600000000!5m2!1sen!2sin"
+            width="100%"
+            height="350"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          >
+          </iframe>
+
+          <p>
+            📍
+            <a
+              href="https://maps.app.goo.gl/jSobW4oQUwcmSKS16"
+              target="_blank"
+              style="color: #007bff; text-decoration: none; font-weight: bold"
+            >
+              Maurya Fruit Shop, Vasai East, Palghar
+            </a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQs Section -->
+    <section id="faqs" class="section faqs-section">
+      <div class="container">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+
+        <div class="faqs-list">
+          <div class="faq-item">
+            <h3 class="faq-question">Do you deliver outside Mumbai?</h3>
+            <div class="faq-answer">
+              <p>
+                ❌ We currently deliver <strong>only within Mumbai</strong>.
+                Delivery charges apply, and the minimum order value should be
+                <strong>₹5,000</strong>.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <h3 class="faq-question">How Can I order Fruits ?</h3>
+            <div class="faq-answer">
+              <p>
+                🍏 You can easily order fresh fruits by giving us a call or
+                sending a message on our phone/WhatsApp. To confirm your order,
+                we request a small advance payment.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <h3 class="faq-question">Can I customize my fruit basket?</h3>
+            <div class="faq-answer">
+              <p>
+                🎁 Absolutely! We create custom fruit baskets for birthdays,
+                corporate gifts, and special occasions.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <h3 class="faq-question">How do I place an order?</h3>
+            <div class="faq-answer">
+              <p>
+                📲 You can order via our website, WhatsApp, or by calling us
+                directly. We also offer weekly subscription plans.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <h3 class="faq-question">
+              What if I'm not satisfied with my order?
+            </h3>
+            <div class="faq-answer">
+              <p>
+                😟 Don’t worry! Contact us within 24 hours and we’ll arrange a
+                replacement or refund. Only
+                <strong>delivery charges</strong> and
+                <strong>making cost</strong> will be deducted.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-contact">
+          <h3>Contact Information</h3>
+
+          <p>
+            <strong>Address:</strong> Durga Nagar , Gaurai Pada , Vasai East ,
+            Palghar , Maharashtra, India
+          </p>
+          <p><strong>Phone:</strong> 8948866980 / 9867420477</p>
+          <p><strong>Email:</strong> naitikk682@gmail.com</p>
+        </div>
+
+        <div class="footer-thanks">
+          <p>
+            Thank you for choosing Maurya Fruits Shop - where freshness meets
+            flavor!
+          </p>
+        </div>
+
+        <div class="footer-copyright">
+          <p>&copy; 2016 Maurya Fruits Shop. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox">
+      <span class="lightbox-close">&times;</span>
+      <img id="lightbox-img" src="" alt="" />
+      <div class="lightbox-caption" id="lightbox-caption"></div>
+    </div>
+    <script type="module" src="js/supabase.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
