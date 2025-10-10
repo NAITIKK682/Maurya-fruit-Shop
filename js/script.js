@@ -84,7 +84,15 @@ const galleryImages = [
     { src: 'images/gallery/img17.jpg', caption: 'Shop View 17' },
     { src: 'images/gallery/img18.jpg', caption: 'Shop View 18' },
     { src: 'images/gallery/img19.jpg', caption: 'Shop View 19' },
-    { src: 'images/gallery/img20.jpg', caption: 'Shop View 20' }
+    { src: 'images/gallery/img20.jpg', caption: 'Shop View 20' },
+    { src: 'images/gallery/img21.jpg', caption: 'Shop View 21' },
+    { src: 'images/gallery/img22.jpg', caption: 'Shop View 22' },
+    { src: 'images/gallery/img23.jpg', caption: 'Shop View 23' },
+    { src: 'images/gallery/img24.jpg', caption: 'Shop View 24' },
+    { src: 'images/gallery/img25.jpg', caption: 'Shop View 25' },
+    { src: 'images/gallery/img26.jpg', caption: 'Shop View 26' },
+    { src: 'images/gallery/img27.jpg', caption: 'Shop View 27' },
+    { src: 'images/gallery/img28.jpg', caption: 'Shop View 28' },
 ];
 
 // Corrected populateFruits function
