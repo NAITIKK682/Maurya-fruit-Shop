@@ -26,21 +26,20 @@ const fruits = [
   { name: 'Apple', localName: 'Apple', img: 'images/fruits/apple.jpg' },
   { name: 'Jackfruit', localName: 'Jackfruit', img: 'images/fruits/jackfruit.jpg' },
   { name: 'Chikoo', localName: 'Chikoo', img: 'images/fruits/chikoo.jpg' },
-  { name: 'Sitaphal', localName: 'Sitaphal', img: 'images/fruits/sitaphal.jpg' },
-  { name: 'Litchi', localName: 'Litchi', img: 'images/fruits/litchi.jpg' },
-  { name: 'Coconut', localName: 'Coconut', img: 'images/fruits/coconut.jpg' },
-  { name: 'Ber', localName: 'Ber', img: 'images/fruits/ber.jpg' },
-  { name: 'Jamun', localName: 'Jamun', img: 'images/fruits/jamun.jpg' },
-  { name: 'Plum', localName: 'Plum', img: 'images/fruits/plum.jpg' },
-  { name: 'Pineapple', localName: 'Pineapple', img: 'images/fruits/pineapple.jpg' },
-  { name: 'Strawberry', localName: 'Strawberry', img: 'images/fruits/strawberry.jpg' },
-  { name: 'Kiwi', localName: 'Kiwi', img: 'images/fruits/kiwi.jpg' },
-  { name: 'Pear', localName: 'Pear', img: 'images/fruits/pear.jpg' },
-  { name: 'Dragon', localName: 'Dragon', img: 'images/fruits/dragon.jpg' },
-  { name: 'Mulberry', localName: 'Mulberry', img: 'images/fruits/mulberry.jpg' },
-  { name: 'Dates', localName: 'Dates', img: 'images/fruits/dates.jpg' }
+  { name: 'Sitaphal', localName: 'Sitaphal', img: 'images/fruits/Sitaphal.jpg' },     // ✅ Capital S
+  { name: 'Litchi', localName: 'Litchi', img: 'images/fruits/Litchi.jpg' },         // ✅ Capital L
+  { name: 'Coconut', localName: 'Coconut', img: 'images/fruits/Coconut.jpg' },     // ✅ Capital C
+  { name: 'Ber', localName: 'Ber', img: 'images/fruits/Ber.jpg' },                 // ✅ Capital B
+  { name: 'Jamun', localName: 'Jamun', img: 'images/fruits/Jamun.jpg' },           // ✅ Capital J
+  { name: 'Plum', localName: 'Plum', img: 'images/fruits/Plum.jpg' },             // ✅ Capital P
+  { name: 'Pineapple', localName: 'Pineapple', img: 'images/fruits/Pineapple.jpg' }, // ✅ Capital P
+  { name: 'Strawberry', localName: 'Strawberry', img: 'images/fruits/Strawberry.jpg' }, // ✅ Capital S
+  { name: 'Kiwi', localName: 'Kiwi', img: 'images/fruits/Kiwi.jpg' },             // ✅ Capital K
+  { name: 'Pear', localName: 'Pear', img: 'images/fruits/Pear.jpg' },             // ✅ Capital P
+  { name: 'Dragon', localName: 'Dragon', img: 'images/fruits/Dragon.jpg' },       // ✅ Capital D
+  { name: 'Mulberry', localName: 'Mulberry', img: 'images/fruits/Mulberry.jpg' }, // ✅ Capital M
+  { name: 'Dates', localName: 'Dates', img: 'images/fruits/Dates.jpg' }           // ✅ Capital D
 ];
-
 // Juice data
 const juices = [
   { name: 'Mango', localName: 'Mango Juice' },
