@@ -1,8 +1,3 @@
-
-
-
-
-
 // DOM Elements
 const navLinks = document.querySelectorAll('.nav-link');
 const menuToggle = document.querySelector('.menu-toggle');
@@ -17,10 +12,6 @@ const lightboxClose = document.querySelector('.lightbox-close');
 const fruitSearch = document.getElementById('fruit-search');
 const juiceSearch = document.getElementById('juice-search');
 const contactForm = document.getElementById('contact-form');
-
-
-
-
 
 // Fruit data with image paths
 const fruits = [
@@ -49,7 +40,6 @@ const fruits = [
   { name: 'Mulberry', localName: 'Mulberry', img: 'images/fruits/mulberry.jpg' },
   { name: 'Dates', localName: 'Dates', img: 'images/fruits/dates.jpg' }
 ];
-
 
 // Juice data
 const juices = [
@@ -95,7 +85,7 @@ const galleryImages = [
     { src: 'images/gallery/img28.jpg', caption: 'Shop View 28' },
 ];
 
-// Corrected populateFruits function
+// Updated populateFruits function with onerror fallback
 function populateFruits() {
     fruitsGrid.innerHTML = '';
 
@@ -103,9 +93,9 @@ function populateFruits() {
         const fruitItem = document.createElement('div');
         fruitItem.className = 'fruit-item';
 
-        // Use the exact image path from the 'img' property
+        // Added onerror to show alt text if image fails
         fruitItem.innerHTML = `
-            <img src="${fruit.img}" alt="${fruit.name}">
+            <img src="${fruit.img}" alt="${fruit.name}" onerror="this.style.display='none'; this.parentElement.querySelector('p').style.color='red';">
             <p>${fruit.localName}</p>
         `;
 
@@ -113,7 +103,7 @@ function populateFruits() {
     });
 }
 
-// Corrected populateJuices function
+// Updated populateJuices function with onerror fallback
 function populateJuices() {
     juicesGrid.innerHTML = '';
 
@@ -121,19 +111,17 @@ function populateJuices() {
         const juiceItem = document.createElement('div');
         juiceItem.className = 'juice-item';
 
-        // Manually specify image path (assume you create 'img' property in juices array if needed)
         const imageName = juice.name.toLowerCase().replace(/\s+/g, '-') + '-juice.jpg';
         const imagePath = `images/juices/${imageName}`;
 
         juiceItem.innerHTML = `
-            <img src="${imagePath}" alt="${juice.name}">
+            <img src="${imagePath}" alt="${juice.name}" onerror="this.style.display='none'; this.parentElement.querySelector('p').style.color='red';">
             <p>${juice.localName}</p>
         `;
 
         juicesGrid.appendChild(juiceItem);
     });
 }
-
 
 // Populate gallery section
 function populateGallery() {
@@ -144,7 +132,7 @@ function populateGallery() {
         galleryItem.className = 'gallery-item';
         
         galleryItem.innerHTML = `
-            <img src="${image.src}" alt="${image.caption}">
+            <img src="${image.src}" alt="${image.caption}" onerror="this.style.opacity='0.3';">
         `;
         
         galleryItem.addEventListener('click', () => {
@@ -160,18 +148,17 @@ function openLightbox(src, caption) {
     lightboxImg.src = src;
     lightboxCaption.textContent = caption;
     lightbox.style.display = 'flex';
-    document.body.style.overflow = 'hidden'; // Prevent scrolling when lightbox is open
+    document.body.style.overflow = 'hidden';
 }
 
 // Close lightbox
 function closeLightbox() {
     lightbox.style.display = 'none';
-    document.body.style.overflow = ''; // Re-enable scrolling
+    document.body.style.overflow = '';
 }
 
 // Search functionality
 function setupSearch() {
-    // Fruit search
     fruitSearch.addEventListener('input', function() {
         const searchTerm = this.value.toLowerCase();
         const fruitItems = document.querySelectorAll('.fruit-item');
@@ -186,7 +173,6 @@ function setupSearch() {
         });
     });
     
-    // Juice search
     juiceSearch.addEventListener('input', function() {
         const searchTerm = this.value.toLowerCase();
         const juiceItems = document.querySelectorAll('.juice-item');
@@ -214,10 +200,8 @@ function setupMobileMenu() {
         }
     });
     
-    // Create mobile menu
     mobileMenu.className = 'mobile-menu';
     
-    // Add navigation links
     const mobileNavList = document.createElement('ul');
     navLinks.forEach(link => {
         const listItem = document.createElement('li');
@@ -244,11 +228,10 @@ function setupSmoothScrolling() {
             
             if (targetElement) {
                 window.scrollTo({
-                    top: targetElement.offsetTop - 70, // Adjust for navbar height
+                    top: targetElement.offsetTop - 70,
                     behavior: 'smooth'
                 });
                 
-                // Update active link
                 navLinks.forEach(l => l.classList.remove('active'));
                 link.classList.add('active');
             }
@@ -260,29 +243,16 @@ function setupSmoothScrolling() {
 function setupContactForm() {
     contactForm.addEventListener('submit', (e) => {
         e.preventDefault();
-        
-        // Get form values
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        const subject = document.getElementById('subject').value;
-        const message = document.getElementById('message').value;
-        
-        // Here you would normally send the data to a server
-        // For now, just show an alert
         alert('Thank you for your message! We will get back to you soon.');
-        
-        // Reset form
         contactForm.reset();
     });
 }
-
 
 document.querySelectorAll('.faq-item').forEach(item => {
   item.addEventListener('click', () => {
     item.classList.toggle('active');
   });
 });
-
 
 // Set up lightbox events
 function setupLightbox() {
@@ -294,7 +264,6 @@ function setupLightbox() {
         }
     });
     
-    // Keyboard support
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape') {
             closeLightbox();
@@ -304,7 +273,6 @@ function setupLightbox() {
 
 // Initialize everything
 document.addEventListener('DOMContentLoaded', () => {
-    // Initialize components
     populateFruits();
     populateJuices();
     populateGallery();
@@ -314,7 +282,6 @@ document.addEventListener('DOMContentLoaded', () => {
     setupLightbox();
     setupContactForm();
     
-    // Add fade-in animations for sections
     const sections = document.querySelectorAll('.section');
     
     const observerOptions = {
@@ -333,7 +300,6 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(section);
     });
     
-    // Add initial fade-in for hero section
     setTimeout(() => {
         document.querySelector('.hero-section').classList.add('fade-in-up');
     }, 500);
