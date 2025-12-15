@@ -13,7 +13,7 @@
       <div class="nav-container">
         <div class="logo">
           <img src="images/logo.png" alt="Maurya Fruits & Juice Center Logo" />
-          <h1>Maurya Fruits & Juice Center</h1>
+          <h1>Maurya Fruits & Juice </h1>
         </div>
 
         <ul class="nav-links">
@@ -555,6 +555,29 @@
       v.src = "https://cdn.voiceflow.com/widget-next/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
   })(document, 'script');
 </script>
+
+
+<script>
+  document.getElementById("contact-form").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const subject = document.getElementById("subject").value;
+    const message = document.getElementById("message").value;
+
+    const whatsappMessage =
+      `Name: ${name}%0AEmail: ${email}%0ASubject: ${subject}%0AMessage: ${message}`;
+
+    const phoneNumber = "8948866980";
+
+    window.open(
+      `https://wa.me/91${phoneNumber}?text=${whatsappMessage}`,
+      "_blank"
+    );
+  });
+</script>
+
 
     <!-- Footer -->
     <footer class="footer">
